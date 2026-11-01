@@ -1,5 +1,5 @@
 name: "ECZ-ID Counterparty Gate"
-description: "Review declared digital-counterparty identity/evidence currentness without a vendor risk score or automatic accept/reject decision."
+description: "Review declared digital-counterparty identity and evidence currentness without issuing a vendor-risk verdict."
 author: EcoCitizenz Ltd
 branding:
   icon: shield
@@ -28,7 +28,7 @@ outputs:
   reason-codes:
     description: "Deterministic reason-code list."
   report-path:
-    description: "Generated local JSON report path."
+    description: "Generated local JSON evidence report path."
 runs:
   using: node24
   main: dist/index.js
