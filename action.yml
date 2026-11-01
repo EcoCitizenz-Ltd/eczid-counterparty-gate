@@ -1,0 +1,34 @@
+name: "ECZ-ID Counterparty Gate"
+description: "Review declared digital-counterparty identity/evidence currentness without a vendor risk score or automatic accept/reject decision."
+author: EcoCitizenz Ltd
+branding:
+  icon: shield
+  color: green
+inputs:
+  manifest-path:
+    description: "Local counterparty JSON manifest path."
+    required: false
+    default: ".eczid/counterparty.json"
+  as-of:
+    description: "Optional deterministic ISO timestamp for evidence-age review."
+    required: false
+  report-path:
+    description: "Path for the local JSON evidence report."
+    required: false
+    default: "eczid-counterparty-gate.json"
+outputs:
+  result-state:
+    description: "NOT_APPLICABLE, OBSERVED or REVIEW_RECOMMENDED."
+  surface-count:
+    description: "Declared digital surface count."
+  next-action:
+    description: "One neutral next action."
+  next-action-url:
+    description: "Resolver/free Business Passport route when applicable."
+  reason-codes:
+    description: "Deterministic reason-code list."
+  report-path:
+    description: "Generated local JSON report path."
+runs:
+  using: node24
+  main: dist/index.js
