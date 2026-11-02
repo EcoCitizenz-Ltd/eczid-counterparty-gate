@@ -64,7 +64,7 @@ Already have a workflow? Add only this step:
 | `next-action` | One neutral next action. |
 | `next-action-url` | Resolver/free Business Passport route when applicable. |
 | `reason-codes` | Deterministic reason-code list. |
-| `report-path` | Generated local JSON report path. |
+| `report-path` | Generated local JSON evidence report path. |
 
 ## Permissions, secrets and data
 
@@ -100,6 +100,10 @@ When an identity/currentness next step is warranted, ECZ-ID returns at most one 
 ## Works with GitHub, not against it
 
 ECZ-ID complements GitHub-native controls with persistent identity, accountable operator context, declared authority, current state, change and re-checkable evidence. It does not replace CodeQL, secret scanning, dependency review, workflow dependency lockfiles or artifact attestations.
+
+## License
+
+ECZ-ID does not charge to install or use this public Action for its intended purpose. The distributed implementation remains proprietary; see [LICENSE.txt](./LICENSE.txt) for the exact terms.
 
 ## Support and security
 
